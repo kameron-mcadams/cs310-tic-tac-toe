@@ -195,9 +195,33 @@ public class TicTacToeModel {
                 }
             }
         }
-        
+        for (int j = 0; j <width;j++){
+            if(board[j][j] == mark){
+                downDiag = downDiag + 1;
+            }
+        }
+        for (int j = 0; j < width;j++){
+            if(board[j][width-j-1] == mark){
+                upDiag = upDiag + 1;
+            }
+        }
+        if (vertical == width){
+            return true;
+        }
+        else if (horizontal == width){
+            return true;
+        }
+        else if (downDiag == width){
+            return true;
+        }
+        else if (upDiag == width){
+            return true;
+        }
+        else{
+            return false;
+        }
 
-        return false; // remove this line later!
+        
 
     }
 	
@@ -205,9 +229,24 @@ public class TicTacToeModel {
         
         /* Check the squares of the board to see if the game is a tie */
         
-        // INSERT YOUR CODE HERE
+        int count = 0;
+        
+        for (int i=0; i < width; i++){
+            for (int j=0; j < width; j++){
+                if (board[i][j] == Mark.EMPTY){
+                    count = count + 1;
+                }
+            }
+        }
 
-        return false; // remove this line later!
+        if (count == 0){
+            return true;
+        }
+        else{
+            return false;
+        }
+
+        
         
     }
 
@@ -242,7 +281,24 @@ public class TicTacToeModel {
         
         /* Output the board contents as a string (see examples) */
         
-        // INSERT YOUR CODE HERE
+        for(int i =0; i < width; i++){
+            output.append(i);
+        }
+        output.append("\n");
+        
+        for(int i = 0; i < width; i++){
+            for(int j = 0; j < width; j++){
+                if(j ==0){
+                    output.append(i).append(" ").append(board[i][j]);
+                }
+                else if (j > 0){
+                    output.append(board[i][j]);
+                }
+                if (j == width - 1){
+                    output.append("\n");
+                }
+            }
+        }
         
         return output.toString();
         
