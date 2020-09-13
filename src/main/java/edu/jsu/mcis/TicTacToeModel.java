@@ -75,7 +75,7 @@ public class TicTacToeModel {
 
         /* Initialize board by filling every square with empty marks */
 
-        // INSERT YOUR CODE HERE
+        
         for (int i = 0; i < width; i++){
           for(int j = 0; j < width; j++){
             board[i][j]= Mark.EMPTY;
@@ -94,7 +94,7 @@ public class TicTacToeModel {
            toggle "xTurn" from true to false (or vice-versa) to switch to the
            other player before returning TRUE.  Otherwise, return FALSE. */
 
-        // INSERT YOUR CODE HERE
+        
         if(isValidSquare(row,col) == false){
           return false;
         }
@@ -122,7 +122,7 @@ public class TicTacToeModel {
 
         /* Return TRUE if the specified location is within the bounds of the board */
 
-        // INSERT YOUR CODE HERE
+        
 
         if((-1 < row) && (row < width) && (-1 < col) && (col < width)){
           return true;
@@ -136,7 +136,7 @@ public class TicTacToeModel {
 
         /* Return TRUE if the square at specified location is marked */
 
-        // INSERT YOUR CODE HERE
+        
         if (board[row][col] != Mark.EMPTY){
           return true;
         }
@@ -152,7 +152,7 @@ public class TicTacToeModel {
 
         /* Return the mark from the square at the specified location */
 
-        // INSERT YOUR CODE HERE
+        
 
         return board[row][col];
 
@@ -164,7 +164,7 @@ public class TicTacToeModel {
            TIE, or if the game is not over.  Return the corresponding Result
            value */
 
-        // INSERT YOUR CODE HERE
+        
 
         if ((isMarkWin(Mark.X) == true)){
             return Result.X;
@@ -190,7 +190,7 @@ public class TicTacToeModel {
         /* Check the squares of the board to see if the specified mark is the
            winner */
 
-        // INSERT YOUR CODE HERE
+        
 
         int vertical = 0;
            int horizontal = 0;
@@ -250,7 +250,7 @@ public class TicTacToeModel {
 
         /* Check the squares of the board to see if the game is a tie */
 
-        // INSERT YOUR CODE HERE
+        
 
         int count = 0;
         
@@ -304,7 +304,7 @@ public class TicTacToeModel {
 
         /* Output the board contents as a string (see examples) */
 
-        // INSERT YOUR CODE HERE
+        
 
         for(int i =0; i < width; i++){
             output.append(i);
